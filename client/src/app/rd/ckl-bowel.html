@@ -1,0 +1,89 @@
+<style>
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs, .nav-pills {
+    text-align:center;
+}
+</style>
+<div class="modal-header">
+    <h4 class="modal-title">Bowel regimen</h4>
+</div>
+
+
+<div class="modal-body">
+
+    <uib-tabset type="pills">
+
+        <uib-tab heading="Yes">
+            <br>
+            <div class="form-group col-md-5 col-md-offset-4">
+                <input type="checkbox" ng-model="rd.gi_b_y1"
+                       ng-true-value="'Continue current regimen. '"
+                       ng-false-value="''" />
+                Continue current regimen
+                <br>
+
+                <input type="checkbox" ng-model="rd.gi_b_y2"
+                       ng-true-value="'Change Meds. '"
+                       ng-false-value="''"
+                >
+                Change Meds
+                <br>
+
+                <input type="checkbox" ng-model="rd.gi_b_y3"
+                       ng-true-value="'Supplement. '"
+                       ng-false-value="''"
+                >
+                Supplement
+                <br>
+
+                <label class="item item-input">
+                    <textarea placeholder="Others"  ng-model ="rd.gi_b_y4"></textarea>
+                </label>
+
+            </div>
+        </uib-tab>
+        <uib-tab heading="No">
+            <br>
+            <div class="form-group col-md-5 col-md-offset-4">
+                <input type="checkbox" ng-model="rd.gi_b_n1"
+                       ng-true-value="'Decrease dosing. '"
+                       ng-false-value="''"
+                />
+                Stop vasoactive medication
+                <br>
+
+                <input type="checkbox" ng-model="rd.gi_b_n2"
+                       ng-true-value="'Discontinue. '"
+                       ng-false-value="''"
+                />
+                Discontinue
+                <br>
+
+                <label class="item item-input">
+                    <textarea placeholder="Others"  ng-model ="rd.gi_b_n3"></textarea>
+                </label>
+            </div>
+        </uib-tab>
+
+    </uib-tabset>
+
+    <br><br><br><br><br><br><br>
+
+</div>
+
+
+
+
+
+
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok($event)">OK</button>
+</div>
+
+
