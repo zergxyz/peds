@@ -36,7 +36,6 @@
         "middleName":"",
         "lastName":"P.T",
         "icuAdmDT":icuAdmDT,
-        "age":"",
         "gender":"Male",
         "bloodType":"B",
         "height":"",

@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.Objects;
 
 @Entity
-@Table(name = "certain_idp_center")
+@Table(name = "certain_peds_center")
 public class Center implements Serializable {
 
     private static final long serialVersionUID = 1L;

@@ -11,7 +11,7 @@
 }
 </style>
 <div class="modal-header">
-    <h4 class="modal-title">Goals of care</h4>
+    <h4 class="modal-title">Social/Spiritual issues</h4>
 </div>
 
 
@@ -23,53 +23,41 @@
         <br>
         <div class="form-group col-md-5 col-md-offset-4">
             <input type="checkbox" ng-model="rd.goal_s_y1"
-                    ng-true-value="'Goals of care clear. '" 
-                    ng-false-value="''" /> 
-                   Goals of care clear
+                    ng-true-value="'Palliative care consult. '"
+                    ng-false-value="''" />
+            Palliative care consult
             <br>
             
             <input type="checkbox" ng-model="rd.goal_s_y2"
-                    ng-true-value="'Family conference. '" 
+                    ng-true-value="'Social worker consult. '"
                     ng-false-value="''" 
-                    > 
-                    Family conference
+                    >
+            Social worker consult
             <br>
             
             <input type="checkbox" ng-model="rd.goal_s_y3"
-                    ng-true-value="'Palliative care consult. '" 
+                    ng-true-value="'Chaplain consult. '"
                     ng-false-value="''" 
-                    > 
-                    Palliative care consult
+                    >
+            Chaplain consult
             <br>
             
             <input type="checkbox" ng-model="rd.goal_s_y4"
-                    ng-true-value="'Family updated. '" 
+                    ng-true-value="'Psychiatry evaluation. '"
                     ng-false-value="''" 
-                    > 
-                    Family updated
+                    >
+            Psychiatry evaluation
             <br>
             <input type="checkbox" ng-model="rd.goal_s_y5"
-                    ng-true-value="'Social worker consult. '" 
+                    ng-true-value="'Family updated about progress and goals of care. '"
                     ng-false-value="''" 
-                    > 
-                    Social worker consult
+                    >
+            Family updated about progress and goals of care
             <br>
-            <input type="checkbox" ng-model="rd.goal_s_y6"
-                    ng-true-value="'Chaplain consult. '" 
-                    ng-false-value="''" 
-                    > 
-                    Chaplain consult
-            <br>
-            <input type="checkbox" ng-model="rd.goal_s_y7"
-                    ng-true-value="'Psychiatry evaluation. '" 
-                    ng-false-value="''" 
-                    > 
-                    Psychiatry evaluation
-            <br>
-            
+
             
             <label class="item item-input">
-                <textarea placeholder="Others"  ng-model ="rd.goal_s_y8"></textarea>
+                <textarea placeholder="Others"  ng-model ="rd.goal_s_y6"></textarea>
             </label>
             
         </div>
@@ -77,16 +65,22 @@
     <uib-tab heading="No">
         <br>
         <div class="form-group col-md-5 col-md-offset-4">
-          
+            <input type="checkbox" ng-model="rd.goal_s_n1"
+                   ng-true-value="'Family not present during rounds. '"
+                   ng-false-value="''"
+            >
+            Family not present during rounds
+            <br>
+
             <label class="item item-input">
-                <textarea placeholder="Others"  ng-model ="rd.goal_s_n1"></textarea>
+                <textarea placeholder="Others"  ng-model ="rd.goal_s_n2"></textarea>
             </label>
         </div>
     </uib-tab>
   
 </uib-tabset>
 
-<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
 
 </div>
     

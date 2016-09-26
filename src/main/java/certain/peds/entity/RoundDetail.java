@@ -1446,13 +1446,6 @@ public class RoundDetail implements Serializable {
         this.goal_s_n2 = goal_s_n2;
     }
 
-    public Round getRd() {
-        return rd;
-    }
-
-    public void setRd(Round rd) {
-        this.rd = rd;
-    }
 
     @Override
     public boolean equals(Object o) {

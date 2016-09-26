@@ -19,57 +19,53 @@ function GoalModalCtrl($scope, $uibModalInstance,RDService) {
                                     RDService.detail.goal_s_y4+
                                     RDService.detail.goal_s_y5+
                                     RDService.detail.goal_s_y6+
-                                    RDService.detail.goal_s_y7+
-                                    RDService.detail.goal_s_y8+
-                                    RDService.detail.goal_s_n1;
+                                    RDService.detail.goal_s_n1+
+                                    RDService.detail.goal_s_n2;
                                   
-                                    
-        $uibModalInstance.close();
-        e.stopPropagation();
+        RDService.saveRounding(RDService.rdData).then(
+            function(response) {
+                $uibModalInstance.close();
+                e.stopPropagation();
+            }
+        );
+
     };
-    // $scope.cancel = function(e) {
-    //   $uibModalInstance.dismiss();
-    //   e.stopPropagation();
-    // };
+
     
     $scope.$watch('rd.goal_s_y1',  function () {
         if(RDService.detail.goal_s_y1) {
             $scope.rd.goal_s_n1= "";
+            $scope.rd.goal_s_n2= "";
         }
     });
     $scope.$watch('rd.goal_s_y2',  function () {
         if(RDService.detail.goal_s_y2) {
             $scope.rd.goal_s_n1= "";
+            $scope.rd.goal_s_n2= "";
         }
     });
     $scope.$watch('rd.goal_s_y3',  function () {
         if(RDService.detail.goal_s_y3) {
             $scope.rd.goal_s_n1= "";
+            $scope.rd.goal_s_n2= "";
         }
     });
     $scope.$watch('rd.goal_s_y4',  function () {
         if(RDService.detail.goal_s_y4) {
             $scope.rd.goal_s_n1= "";
+            $scope.rd.goal_s_n2= "";
         }
     });
     $scope.$watch('rd.goal_s_y5',  function () {
         if(RDService.detail.goal_s_y5) {
             $scope.rd.goal_s_n1= "";
+            $scope.rd.goal_s_n2= "";
         }
     });
     $scope.$watch('rd.goal_s_y6',  function () {
         if(RDService.detail.goal_s_y6) {
             $scope.rd.goal_s_n1= "";
-        }
-    });
-    $scope.$watch('rd.goal_s_y7',  function () {
-        if(RDService.detail.goal_s_y7) {
-            $scope.rd.goal_s_n1= "";
-        }
-    });
-    $scope.$watch('rd.goal_s_y8',  function () {
-        if(RDService.detail.goal_s_y8) {
-            $scope.rd.goal_s_n1= "";
+            $scope.rd.goal_s_n2= "";
         }
     });
  
@@ -81,8 +77,16 @@ function GoalModalCtrl($scope, $uibModalInstance,RDService) {
             $scope.rd.goal_s_y4= "";
             $scope.rd.goal_s_y5= "";
             $scope.rd.goal_s_y6= "";
-            $scope.rd.goal_s_y7= "";
-            $scope.rd.goal_s_y8= "";
+        }
+    });
+    $scope.$watch('rd.goal_s_n2',  function () {
+        if(RDService.detail.goal_s_n2) {
+            $scope.rd.goal_s_y1= "";
+            $scope.rd.goal_s_y2= "";
+            $scope.rd.goal_s_y3= "";
+            $scope.rd.goal_s_y4= "";
+            $scope.rd.goal_s_y5= "";
+            $scope.rd.goal_s_y6= "";
         }
     });
     

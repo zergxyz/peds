@@ -11,7 +11,7 @@
 }
 </style>
 <div class="modal-header">
-    <h4 class="modal-title">Medications review</h4>
+    <h4 class="modal-title">Medications review/ID/labs</h4>
 </div>
 
 
@@ -27,9 +27,33 @@
                     ng-false-value="''" /> 
                     Medications reviewed
             <br>
+
+            <input type="checkbox" ng-model="rd.med_m_y2"
+                   ng-true-value="'Continue antimicrobials. '"
+                   ng-false-value="''" />
+            Continue antimicrobials
+            <br>
+
+            <input type="checkbox" ng-model="rd.med_m_y3"
+                   ng-true-value="'De-escalate antimicrobials. '"
+                   ng-false-value="''" />
+            De-escalate antimicrobials
+            <br>
+
+            <input type="checkbox" ng-model="rd.med_m_y4"
+                   ng-true-value="'Change coverage. '"
+                   ng-false-value="''" />
+            Change coverage
+            <br>
+
+            <input type="checkbox" ng-model="rd.med_m_y5"
+                   ng-true-value="'ID consult. '"
+                   ng-false-value="''" />
+            ID consult
+            <br>
             
             <label class="item item-input">
-                <textarea placeholder="Others"  ng-model ="rd.med_m_y2"></textarea>
+                <textarea placeholder="Others"  ng-model ="rd.med_m_y6"></textarea>
             </label>
             
         </div>
@@ -37,8 +61,14 @@
     <uib-tab heading="No">
         <br>
         <div class="form-group col-md-5 col-md-offset-4">
+            <input type="checkbox" ng-model="rd.med_m_n1"
+                   ng-true-value="'No antimicrobials ordered. '"
+                   ng-false-value="''" />
+            No antimicrobials ordered
+            <br>
+
             <label class="item item-input">
-                <textarea placeholder="Others"  ng-model ="rd.med_m_n1"></textarea>
+                <textarea placeholder="Others"  ng-model ="rd.med_m_n2"></textarea>
             </label>
         </div>
     </uib-tab>

@@ -20,8 +20,12 @@ function PTModalCtrl($scope, $uibModalInstance,RDService) {
                                         RDService.detail.pt_p_n2;
                                       
                                         
-      $uibModalInstance.close();
-      e.stopPropagation();
+        RDService.saveRounding(RDService.rdData).then(
+            function(response) {
+                $uibModalInstance.close();
+                e.stopPropagation();
+            }
+        );
     };
     // $scope.cancel = function(e) {
     //   $uibModalInstance.dismiss();

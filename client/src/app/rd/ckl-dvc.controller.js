@@ -12,7 +12,7 @@ function DvcModalCtrl($scope, $uibModalInstance,RDService) {
 
     $scope.ok = function(e) {
       
-        //update pain: 
+        //update devices:
         RDService.rdData.devices  = RDService.detail.dev_d_y1+
                                     RDService.detail.dev_d_y2+
                                     RDService.detail.dev_d_y3+
@@ -22,15 +22,16 @@ function DvcModalCtrl($scope, $uibModalInstance,RDService) {
                                     RDService.detail.dev_d_y7+
                                     RDService.detail.dev_d_y8+
                                     RDService.detail.dev_d_n1;
-                                  
-                                    
-        $uibModalInstance.close();
-        e.stopPropagation();
+
+        RDService.saveRounding(RDService.rdData).then(
+            function(response) {
+                $uibModalInstance.close();
+                e.stopPropagation();
+            }
+        );
+
     };
-    // $scope.cancel = function(e) {
-    //   $uibModalInstance.dismiss();
-    //   e.stopPropagation();
-    // };
+
     
     $scope.$watch('rd.dev_d_y1',  function () {
         if(RDService.detail.dev_d_y1) {

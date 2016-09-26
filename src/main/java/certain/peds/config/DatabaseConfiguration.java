@@ -68,7 +68,7 @@ public class DatabaseConfiguration implements EnvironmentAware {
         LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
         entityManagerFactoryBean.setDataSource(dataSource);
         entityManagerFactoryBean.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
-        entityManagerFactoryBean.setPackagesToScan("certain.adt");
+        entityManagerFactoryBean.setPackagesToScan("certain.peds");
 
         Properties jpaProperties = new Properties();
 

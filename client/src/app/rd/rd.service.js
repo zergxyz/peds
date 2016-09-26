@@ -9,7 +9,6 @@
   function RDService($http) {
     
     var checkRounding = function(ctnID, today, centerID) {
-      alert("call api with "+ctnID+" "+today+" "+centerID);
       return $http.get('http://localhost:8080/peds/api/roundings/check?'
                       +'ctnID='+ctnID+'&&date='+today+'&&id='+centerID)
                 .then(function (response) {

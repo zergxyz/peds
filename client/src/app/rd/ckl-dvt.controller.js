@@ -12,7 +12,7 @@ function DVTModalCtrl($scope, $uibModalInstance,RDService) {
 
     $scope.ok = function(e) {
       
-        //update pain: 
+        //update dvt:
         RDService.rdData.dvt      = RDService.detail.hem_dvt_y1+
                                     RDService.detail.hem_dvt_y2+
                                     RDService.detail.hem_dvt_y3+
@@ -21,15 +21,14 @@ function DVTModalCtrl($scope, $uibModalInstance,RDService) {
                                     RDService.detail.hem_dvt_n2+
                                     RDService.detail.hem_dvt_n3;
                                   
-                                    
-        $uibModalInstance.close();
-        e.stopPropagation();
+        RDService.saveRounding(RDService.rdData).then(
+            function(response) {
+                $uibModalInstance.close();
+                e.stopPropagation();
+            }
+        );
     };
-    // $scope.cancel = function(e) {
-    //   $uibModalInstance.dismiss();
-    //   e.stopPropagation();
-    // };
-    
+
     $scope.$watch('rd.hem_dvt_y1',  function () {
         if(RDService.detail.hem_dvt_y1) {
             $scope.rd.hem_dvt_n1= "";

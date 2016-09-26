@@ -158,7 +158,6 @@ public class Admission implements Serializable {
         this.weight = weight;
     }
 
-
     public Date getDob() {
         return dob;
     }
