@@ -27,11 +27,11 @@ function SBModalCtrl($scope, $uibModalInstance,RDService) {
         
         RDService.saveRounding(RDService.rdData).then(
             function(response) {
-                $uibModalInstance.close();
-                e.stopPropagation();
+
             }
         );
-        
+        $uibModalInstance.close();
+        e.stopPropagation();
         
     };
     // $scope.cancel = function(e) {

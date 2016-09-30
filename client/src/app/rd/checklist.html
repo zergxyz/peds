@@ -7,11 +7,11 @@
             </button>
         </div>
         <div class="col-md-4" style="font-size: 12pt">
-            <b>321-23-001 &nbsp Patient, Test</b>
+            <b>{{rd.adm.ctnID}} &nbsp {{rd.adm.firstName}},{{rd.adm.lastName}}</b>
         </div>
         <div class="col-md-3">
-            ICU Days &nbsp&nbsp Age: <br>
-            Height: &nbsp&nbsp Weight:
+            Gender: {{rd.adm.gender}} &nbsp&nbsp <br>
+            Height: {{rd.adm.height}} &nbsp&nbsp Weight: {{rd.adm.weight}}
         </div>
         <div class="col-md-3">
             <button type="button" class="btn btn-primary" ng-click="rd.printRD()">

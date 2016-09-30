@@ -10,7 +10,7 @@
     var center = {};
 
     var authenticate = function(credentials) {
-      return $http.post('http://localhost:8080/peds/api/user/authenticate',
+      return $http.post('/api/user/authenticate',
                 credentials)
                 .then(function (response) {
                     return response;
@@ -18,7 +18,7 @@
     };
 
     var getCenter = function(ctr) {
-        return $http.post('http://localhost:8080/peds/api/center',
+        return $http.post('/api/center',
                 ctr).then(
                 function (response) {
                     return response;
@@ -26,7 +26,7 @@
     };
 
     var userRegister = function(user) {
-            return $http.post('http://localhost:8080/peds/api/user/register',
+            return $http.post('/api/user/register',
                     user).then(
                     function (response) {
                         return response;

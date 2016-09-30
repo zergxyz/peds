@@ -37,11 +37,11 @@
         "lastName":"P.T",
         "icuAdmDT":icuAdmDT,
         "gender":"Male",
-        "bloodType":"B",
+        "bloodType":"A Rh(+)",
         "height":"",
         "weight":"",
         "userAdmit":localStorageService.get("user").username,
-        "codeStatus":"A",
+        "codeStatus":"Full code",
         "center": {
           "id": localStorageService.get("user").center.id
         }
@@ -57,7 +57,6 @@
           vm.adm.firstName = response.data.firstName;
           vm.adm.middleName =response.data.middleName;
           vm.adm.lastName = response.data.lastName;
-          vm.adm.age = response.data.age;
           vm.adm.gender = response.data.gender;
           vm.adm.bloodType = response.data.bloodType;
           vm.adm.height = response.data.height;

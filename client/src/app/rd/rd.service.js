@@ -9,7 +9,7 @@
   function RDService($http) {
     
     var checkRounding = function(ctnID, today, centerID) {
-      return $http.get('http://localhost:8080/peds/api/roundings/check?'
+      return $http.get('/api/roundings/check?'
                       +'ctnID='+ctnID+'&&date='+today+'&&id='+centerID)
                 .then(function (response) {
                     return response;
@@ -17,14 +17,14 @@
     };
     
     var saveRounding = function(rounding) {
-      return $http.post('http://localhost:8080/peds/api/roundings',
+      return $http.post('/api/roundings',
                 rounding)
                 .then(function (response) {
                     return response;
                 });
     };
     
-    var rdData = {};
+    var rdData = {"id":null};
     
     var detail = {};
     

@@ -10,6 +10,7 @@
                                                                 $aside) {
     var vm = this;
     vm.rdData = RDService.rdData;
+    vm.adm = CurPTService.adm;
 
     vm.openAside = function(position, backdrop) {
           vm.asideState = {

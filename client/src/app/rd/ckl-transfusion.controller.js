@@ -19,10 +19,12 @@ function TransfusionModalCtrl($scope, $uibModalInstance,RDService) {
                                         RDService.detail.hem_t_n2;
        RDService.saveRounding(RDService.rdData).then(
            function(response) {
-               $uibModalInstance.close();
-               e.stopPropagation();
+
            }
        );
+
+      $uibModalInstance.close();
+      e.stopPropagation();
 
     };
 

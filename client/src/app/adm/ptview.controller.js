@@ -9,7 +9,8 @@
 function PTViewModalCtrl($scope, $uibModalInstance, $state,
                          CurPTService, RDService, ADMService) {
 
-    
+    $scope.adm = CurPTService.adm;
+
     $scope.dashboard = function () {
       $state.go('dashboard');
       $uibModalInstance.close();

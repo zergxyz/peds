@@ -47,21 +47,35 @@
     // vm.hello = localStorageService.get('greetings');
 
     // activate();
-    vm.user = {};
+
+
+    if(localStorageService.get('user')) {
+        vm.user = localStorageService.get("user");
+        vm.username = vm.user.username;
+        vm.password = vm.user.password;
+    }
+    else {
+        vm.user = {};
+    }
 
     function login() {
-      vm.user.username = vm.username;
-      vm.user.password = vm.password;
-      Auth.authenticate(vm.user).then(
-        function (response) {
-          localStorageService.set('user', response.data);
-          $state.go("demo");
-        },
-        function errorCallback(response) {
-          alert("Invalid credentials, please try again");
-          vm.username="";
-          vm.password="";
-        });
+        if(localStorageService.get('user')) {
+            $state.go("demo");
+        }
+        else {
+            vm.user.username = vm.username;
+            vm.user.password = vm.password;
+            Auth.authenticate(vm.user).then(
+                function (response) {
+                  localStorageService.set('user', response.data);
+                  $state.go("demo");
+                },
+                function errorCallback(response) {
+                  alert("Invalid credentials, please try again");
+                  vm.username="";
+                  vm.password="";
+            });
+        }
     }
     
      function claim() {

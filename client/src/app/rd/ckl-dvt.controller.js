@@ -23,10 +23,12 @@ function DVTModalCtrl($scope, $uibModalInstance,RDService) {
                                   
         RDService.saveRounding(RDService.rdData).then(
             function(response) {
-                $uibModalInstance.close();
-                e.stopPropagation();
+
             }
         );
+
+        $uibModalInstance.close();
+        e.stopPropagation();
     };
 
     $scope.$watch('rd.hem_dvt_y1',  function () {

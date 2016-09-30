@@ -7,9 +7,14 @@
 
   /** @ngInject */
   function DashboardController($scope, $aside, $uibModal, 
-  CurPTService, $state, SMIRuleEngine, ADMService) {
+  CurPTService, $state, SMIRuleEngine, ADMService, localStorageService) {
+
+    if(!localStorageService.get('user')) {
+        $state.go("signin");
+    }
     
     $scope.currentPT =CurPTService.currentPT;
+    $scope.adm = CurPTService.adm;
     // if (CurPTService.currentPT.medlist.length>0) {
     //   alert(CurPTService.currentPT.medlist[0].name);
     // }

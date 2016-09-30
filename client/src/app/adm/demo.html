@@ -40,13 +40,13 @@
             <div class="form-group">
               <div class="input-group">
                 <div class="input-group-addon"><i class="fa fa-search"></i></div>
-                <input type="text" class="form-control" placeholder="Search patient" ng-model="synd">
+                <input type="text" class="form-control" placeholder="Search patient" ng-model="filter.ctnID">
               </div>      
             </div>
           </form>
           
-         <ul class="list-group">
-           <a href="" ng-click="demo.ptView(adm)" class="list-group-item" ng-repeat="adm in demo.adms">{{adm.ctnID}}</a>
+        <ul class="list-group">
+           <a href="" ng-click="demo.ptView(adm)" class="list-group-item" ng-repeat="adm in demo.adms | filter:filter.ctnID ">{{adm.ctnID}}</a>
           <!--<a href="" ng-click="demo.ptView()" class="list-group-item">0012345 <i class="fa fa-registered pull-right" aria-hidden="true" style="color: green"></i></a>-->
           <!--<a href="#" class="list-group-item">12345</a>-->
           <!--<a href="#" class="list-group-item">pt323232</a>-->

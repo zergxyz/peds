@@ -39,7 +39,6 @@
     <ul class="nav nav-pills nav-stacked">
       <li role="presentation" ><a href="#/demo"><i class="fa fa-list"></i>&nbspCurrent patients</a></li>
       <li role="presentation" class="active"><a href="#"><i class="fa fa-user-md"></i>&nbsp New patient</a></li>
-      <li><a ng-click =demo.logout()><i class="fa fa-sign-out"></i>&nbspSign out</a></li>
     </ul>
   </div>
   <div class="col-md-9">
@@ -67,10 +66,10 @@
       </div><br>
       
       <div class="row">
-          <div class="col-sm-4">
-              <input type="text" placeholder="Age" class="form-control" autofocus 
-              ng-model="na.adm.age" ng-value="na.adm.age" >
-          </div>
+          <!--<div class="col-sm-4">-->
+              <!--<input type="text" placeholder="Age" class="form-control" autofocus -->
+              <!--ng-model="na.adm.age" ng-value="na.adm.age" >-->
+          <!--</div>-->
           <div class="col-sm-4">
             <div>
                 <select id="country" class="form-control" ng-model="na.adm.gender" ng-value="na.adm.gender">
@@ -98,8 +97,14 @@
           <div>
               <select id="bloodType" class="form-control" 
               ng-model="na.adm.bloodType" ng-value="na.adm.bloodType">
-                  <option>A</option>
-                  <option>B</option>
+                  <option>A Rh(+)</option>
+                  <option>A Rh(-)</option>
+                  <option>B Rh(+)</option>
+                  <option>B Rh(-)</option>
+                  <option>O Rh(+)</option>
+                  <option>O Rh(-)</option>
+                  <option>AB Rh(+)</option>
+                  <option>AB Rh(-)</option>
               </select>
           </div>
         </div>
@@ -108,8 +113,9 @@
                   <div>
                       <select id="codeStatus" class="form-control" 
                       ng-model="na.adm.codeStatus" ng-value="na.adm.codeStatus" >
-                          <option>A</option>
-                          <option>B</option>
+                          <option>Full code</option>
+                          <option>DNR DNI</option>
+                          <option>Unknown</option>
                       </select>
                   </div>
         </div>

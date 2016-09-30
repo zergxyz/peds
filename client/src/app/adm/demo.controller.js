@@ -8,11 +8,16 @@
   /** @ngInject */
   function DemoController( Auth, $state, $uibModal, localStorageService, 
                           ADMService, CurPTService) {
+
+    if(!localStorageService.get('user')) {
+        $state.go("signin");
+    }
     
     var vm = this;
     vm.user = localStorageService.get("user");
     vm.logout = function () {
-      $state.go("signin");
+        localStorageService.remove("user");
+        $state.go("signin");
     }
     
     ADMService.getCurrentAdmissions().then(

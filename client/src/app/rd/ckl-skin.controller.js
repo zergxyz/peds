@@ -17,14 +17,14 @@ function SkinModalCtrl($scope, $uibModalInstance,RDService) {
                                         RDService.detail.skin_s_y2+
                                         RDService.detail.skin_s_y3+
                                         RDService.detail.skin_s_n1;
-                                      
-                                        
+
         RDService.saveRounding(RDService.rdData).then(
             function(response) {
-                $uibModalInstance.close();
-                e.stopPropagation();
             }
         );
+
+        $uibModalInstance.close();
+        e.stopPropagation();
     };
 
     
